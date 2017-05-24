@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Event {
+  string orgKey = 1;
+  string timestamp = 2;
+  int64 duration = 3;
+  map<string, string> context = 4;
+  repeated Event child_events = 5;
+}
+
